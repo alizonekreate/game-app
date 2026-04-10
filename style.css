@@ -1,0 +1,247 @@
+:root {
+    --bg: #0f1220;
+    --card: #171a2b;
+    --text: #e9ecff;
+    --muted: #b7bde7;
+    --error: #ff8a8a;
+    --btn: #5e6bff;
+    --btn2: #2b2f4a;
+}
+
+html {
+    font-size: 18px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.app {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 0.8rem;
+    padding: 1rem;
+    margin: 0.75rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+}
+
+.header h1 {
+    margin: 0.6rem 0 0.3rem;
+    font-size: 2rem;
+}
+
+.subtitle {
+    margin: 0 0 1.2rem;
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    align-items: center;
+    margin: 0.6rem 0;
+    display: flex;
+    gap: 12px;
+}
+
+label {
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+select {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 0.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: #0f1220;
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    /* vertical center */
+    justify-content: center;
+}
+
+button {
+    border: 0;
+    border-radius: 0.75rem;
+    padding: 0.6rem 1rem;
+    background: var(--btn);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button.secondary {
+    background: var(--btn2);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.howto summary {
+    cursor: pointer;
+    color: var(--muted);
+    text-decoration: underline;
+    font-size: 1.1rem;
+}
+
+.howto ul {
+    margin: 0.6rem 0 0;
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+.hintBox,
+.roastBox,
+.wordBox {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.hintTitle,
+.roastTitle {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.hintText,
+.roastText {
+    margin-top: 0.4rem;
+    font-size: 1.1rem;
+}
+
+.maskedWord {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 0.6rem;
+    text-align: center;
+    font-weight: 800;
+}
+
+.statusRow {
+    margin-top: 0.75rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.lives {
+    font-size: 1.6rem;
+}
+
+.chase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.track {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.lettersGrid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    gap: 0.5rem;
+}
+
+.lettersGrid button {
+    padding: 0.6rem 0;
+    border-radius: 0.6rem;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.resultMessage {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 0.6rem 0;
+}
+
+.resultWord,
+.resultRoast {
+    color: var(--muted);
+    font-size: 1.3rem;
+}
+
+.footer {
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.chaseCharacter {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.topbar .actions {
+    margin-left: auto;
+}
+
+#resultImage {
+    width: 80%;
+    max-width: 700px;
+    border-radius: 12px;
+    display: block;
+    margin: 20px auto;
+}
+
+
+#playAgainBtn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}

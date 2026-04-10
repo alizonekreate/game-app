@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess It or Get Roasted! (Tom & Jerry Edition)</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="app">
+        <header class="header">
+            <h1>Guess It or Get Roasted! (Tom & Jerry Edition)</h1>
+            <p class="subtitle">
+                Choose a category, then guess the hidden word. Wrong guesses make Tom get closer 😼
+            </p>
+        </header>
+
+        <section id="startScreen" class="card">
+            <h2>Start</h2>
+
+            <div class="row">
+                <label for="categorySelect">Choose:</label>
+                <select id="categorySelect">
+                    <option value="Random Word">Random Word</option>
+                    <option value="History">History</option>
+                    <option value="Person">Person</option>
+                    <option value="Food">Food</option>
+                    <option value="Place">Place</option>
+                    <option value="Animal">Animal</option>
+                    <option value="Object">Object</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div class="chase">
+                <img id="jerry" src="tom.gif" alt="Jerry" class="chaseCharacter">
+                <span class="track">────────────</span>
+                <img id="tom" src="jerry.gif" alt="Tom" class="chaseCharacter">
+            </div>
+
+            <br>
+            <br>
+
+            <details class="howto">
+                <summary>How to play</summary>
+                <ul>
+                    <li>Pick a category and press <b>Start Game</b></li>
+                    <li>Guess letters using A–Z buttons</li>
+                    <li>Wrong guesses reduce lives 🧀</li>
+                    <li>Win before Tom catches Jerry 😼</li>
+                </ul>
+            </details>
+
+            <br>
+
+            <div class="actions">
+                <button id="startBtn">Start Game</button>
+            </div>
+
+            <p id="startError" class="error"></p>
+        </section>
+
+        <section id="gameScreen" class="card hidden">
+            <div class="topbar">
+                <div>
+                    <h2>Game</h2>
+                    <p class="meta">
+                        Category: <span id="categoryLabel">-</span>
+                    </p>
+                </div>
+                <button id="restartBtn" class="secondary">Restart</button>
+            </div>
+
+            <div class="hintBox">
+                <p class="hintTitle">Description</p>
+                <p id="hintText">Loading description...</p>
+            </div>
+
+            <div class="wordBox">
+                <p id="maskedWord" class="maskedWord">_ _ _ _</p>
+            </div>
+
+            <div class="statusRow">
+                <div id="livesBox" class="lives"></div>
+                <div class="chase">
+                    <span id="tom">😼</span>
+                    <span class="track">────────────</span>
+                    <span id="jerry">🐭</span>
+                </div>
+            </div>
+
+            <div class="roastBox">
+                <p class="roastTitle">Tom says:</p>
+                <p id="roastText">Make your first guess…</p>
+            </div>
+
+            <div id="lettersGrid" class="lettersGrid"></div>
+
+            <p id="gameError" class="error"></p>
+        </section>
+
+        <div id="resultScreen" class="hidden">
+            <br>
+            <h2 id="resultMessage"></h2>
+            <p>Word: <span id="finalWord"></span></p>
+            <p>Tom: <span id="finalRoast"></span></p>
+            <br>
+            <img id="resultImage" src="" alt="Result Image" style="max-width:200px; margin-top:10px;">
+            <br>
+            <button id="playAgainBtn">Play Again</button>
+        </div>
+
+
+
+        <footer class="footer">
+            <small>Uplift Code Camp</small>
+        </footer>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
